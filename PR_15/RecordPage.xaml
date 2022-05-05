@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR_15.RecordPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection x:Name="Table" Title="Записи"/>
+                </TableRoot>
+            </TableView>
+            <Button Clicked="ReturnClick" Text="Вернуться к таймеру"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

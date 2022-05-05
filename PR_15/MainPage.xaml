@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR_15.MainPage">
+
+    <StackLayout>
+        <Label  x:Name="label"
+                VerticalOptions = "Center"
+                HorizontalOptions = "Center"
+                FontSize ="Medium"/>
+        <Button x:Name="button"
+                VerticalOptions = "Start" 
+                HorizontalOptions = "Center"
+                Text = "Включить Таймер."
+                Clicked="TimerButtonClicked"
+                AbsoluteLayout.LayoutBounds="120,120,120,11"/>
+        
+        <Entry x:Name="entry"  AbsoluteLayout.LayoutBounds="120,120,120,11"/>
+
+        <Button 
+                AbsoluteLayout.LayoutBounds="120,120,120,11"
+                Text = "Перейти на запись "
+                Clicked="OpenPage"/>
+   
+    </StackLayout>
+
+</ContentPage>
