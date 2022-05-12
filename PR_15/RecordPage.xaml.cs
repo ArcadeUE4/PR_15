@@ -20,7 +20,6 @@ namespace PR_15
         {
             TextCell cellText = new TextCell() { Text = cell };
             Table.Add(cellText);
-            Table.Add(cellText);
         }
     }
 }

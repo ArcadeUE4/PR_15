@@ -8,7 +8,7 @@ namespace PR_15
     public partial class MainPage : ContentPage
     {
         Stopwatch stopwatch = new Stopwatch();
-        bool alive = false;
+        bool isLaunching = false;
         public MainPage()
         {
             InitializeComponent();
@@ -23,17 +23,18 @@ namespace PR_15
             }
             else
             {
-                if (alive == true)
+                if (isLaunching == true)
                 {
-                    alive = false;
+                    isLaunching = false;
                     RecordPage record = new RecordPage();
                     record.callcells(entry.Text);
+                    record.callcells(label.Text);
                     entry.Text = "";
                     stopwatch.Stop();
                 }
                 else
                 {
-                    alive = true;
+                    isLaunching = true;
                     stopwatch.Restart();
                     DispalyTime();
                 }
@@ -57,7 +58,7 @@ namespace PR_15
 
             label.Text = elapsedTime;
 
-            return alive;
+            return isLaunching;
 
         }
         private void OpenPage(object sender, EventArgs e)
